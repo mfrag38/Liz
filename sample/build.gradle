@@ -1,0 +1,48 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion project.sdkVersion
+
+
+    defaultConfig {
+        applicationId "com.mfrag.liz.sample"
+        minSdkVersion 19
+        targetSdkVersion project.sdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(':library')
+
+    /* tests */
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:3.0.1', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+
+    /* support */
+    implementation "com.android.support:appcompat-v7:$supportVersion"
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    implementation "com.android.support:recyclerview-v7:$supportVersion"
+
+    /* preferences */
+    implementation "com.orhanobut:hawk:2.0.1"
+
+    /* icons */
+    implementation 'com.mikepenz:iconics-core:3.0.0@aar'
+    implementation "com.mikepenz:iconics-views:3.0.0@aar"
+    implementation 'com.mikepenz:community-material-typeface:2.0.46.1@aar'
+}

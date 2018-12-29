@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Liz</string>
+
+    <string name="themed_sample_text_view">Themed Sample Text View</string>
+    <string name="themed_sample_edit_text"> Themed Sample Edit Text</string>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mfrag.liz.ui.ThemedCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/small_spacing">
+
+        <com.mfrag.liz.ui.ThemedTextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:liz_color_style="accent"
+            android:textSize="@dimen/big_text"
+            android:text="@string/themed_sample_text_view"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/des_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <com.mfrag.liz.ui.ThemedIcon
+                android:layout_width="@dimen/big_icon"
+                android:layout_height="@dimen/big_icon" />
+
+            <com.mfrag.liz.ui.ThemedEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/small_spacing"
+                android:text="@string/themed_sample_edit_text" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</com.mfrag.liz.ui.ThemedCardView>
